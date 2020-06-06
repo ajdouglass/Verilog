@@ -21,10 +21,10 @@
 
 module EdgeDetector ( 
     input clk,              // System clock 
-	input rst_n,            // Active low reset 
-	input edge_signal,      // Signal to detect edges on 
-	output rise_edge,       // Strobe high for rising edge 
-	output fall_edge        // Strobe high for falling edge 
+    input rst_n,            // Active low reset 
+    input edge_signal,      // Signal to detect edges on 
+    output rise_edge,       // Strobe high for rising edge 
+    output fall_edge        // Strobe high for falling edge 
 ); 
 
 // Store the value of edge_signal on the previous clock cycle
