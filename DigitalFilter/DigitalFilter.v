@@ -7,6 +7,13 @@
  * Description: This module filters the input signal based on the 
  *              specified filter size. All pulses that are up to 
  *              FILTER_SIZE clock pulses long will be removed. 
+ *              Below is an example waveform with FILTER_SIZE = 2.
+ *                     _   _   _   _   _   _   _   _   _   _   _   
+ *  clk:             _| |_| |_| |_| |_| |_| |_| |_| |_| |_| |_| |_
+ *                           _______             _________________
+ *  noisy_signal:    _______|       |___________|                 
+ *                                                         _______
+ *  filtered_signal: _____________________________________|
  *
  *******************************************************************/
 
@@ -18,7 +25,7 @@ module DigitalFilter (
 ); 
 
 // Specify the width of the filter
-parameter FILTER_SIZE = 3;
+parameter FILTER_SIZE = 2;
 
 // Temporary register to hold the value of noisy_signal from 
 // previous clock cycles
